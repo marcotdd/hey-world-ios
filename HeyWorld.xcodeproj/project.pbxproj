@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2452CA4B296F6BC700DD0CF7 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452CA4A296F6BC700DD0CF7 /* ErrorView.swift */; };
 		2489D9A2296F18AB0033717C /* HeyWorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2489D9A1296F18AB0033717C /* HeyWorldApp.swift */; };
 		2489D9A6296F18AC0033717C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2489D9A5296F18AC0033717C /* Assets.xcassets */; };
 		2489D9A9296F18AC0033717C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2489D9A8296F18AC0033717C /* Preview Assets.xcassets */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2452CA4A296F6BC700DD0CF7 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		2489D99E296F18AB0033717C /* HeyWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2489D9A1296F18AB0033717C /* HeyWorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyWorldApp.swift; sourceTree = "<group>"; };
 		2489D9A5296F18AC0033717C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2452CA49296F6BAF00DD0CF7 /* Reusable Components */ = {
+			isa = PBXGroup;
+			children = (
+				2452CA4A296F6BC700DD0CF7 /* ErrorView.swift */,
+			);
+			path = "Reusable Components";
+			sourceTree = "<group>";
+		};
 		2489D995296F18AB0033717C = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,7 @@
 				2489D9CE296F1A710033717C /* Features */,
 				2489D9D4296F1B720033717C /* Models */,
 				2489D9A7296F18AC0033717C /* Preview Content */,
+				2452CA49296F6BAF00DD0CF7 /* Reusable Components */,
 				2489D9E8296F1F180033717C /* Utilities */,
 			);
 			path = App;
@@ -358,6 +369,7 @@
 				2489D9D3296F1ADB0033717C /* CountryListViewModel.swift in Sources */,
 				2489D9A2296F18AB0033717C /* HeyWorldApp.swift in Sources */,
 				2489D9D6296F1B860033717C /* CountryLight.swift in Sources */,
+				2452CA4B296F6BC700DD0CF7 /* ErrorView.swift in Sources */,
 				2489D9D1296F1AC70033717C /* CountryListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

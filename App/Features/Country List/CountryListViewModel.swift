@@ -8,4 +8,12 @@ final class CountryListViewModel: ObservableObject {
         self.state = .success
         self.countries = CountryLight.mokedList
     }
+    
+    func fetch() {
+        print("----> FETCH DATA")
+    }
+    
+    func refresh() {
+        print("----> REFRESH")
+    }
 }

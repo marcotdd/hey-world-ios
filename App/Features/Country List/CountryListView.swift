@@ -11,14 +11,19 @@ struct CountryListView: View {
                     ProgressView()
                     
                 case .failure(let error):
-                    // TODO: Handle error view
-                    Text(error.localizedDescription)
+                    ErrorView(error: error)
+                        .refreshable {
+                            viewModel.refresh()
+                        }
                     
                 case .success:
                     content
                 }
             }
             .navigationTitle("World Countries")
+            .onAppear {
+                viewModel.fetch()
+            }
         }
     }
     
@@ -30,6 +35,9 @@ struct CountryListView: View {
                 }
             }
             .listStyle(.plain)
+            .refreshable {
+                viewModel.refresh()
+            }
         }
     }
 }

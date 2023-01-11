@@ -25,7 +25,7 @@ struct CountryDetailView: View {
     }
     
     private var content: some View {
-        VStack {
+        ScrollView {
             Text(viewModel.country.name)
         }
         .navigationTitle(viewModel.country.name)
