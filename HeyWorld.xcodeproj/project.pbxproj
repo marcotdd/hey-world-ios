@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240C91EC29706026003547FC /* GetCountries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 240C91EB29706026003547FC /* GetCountries.graphql */; };
+		240C91F82970613D003547FC /* GetCountriesQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240C91F02970613D003547FC /* GetCountriesQuery.graphql.swift */; };
+		240C91F92970613D003547FC /* Query.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240C91F32970613D003547FC /* Query.graphql.swift */; };
+		240C91FA2970613D003547FC /* Country.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240C91F42970613D003547FC /* Country.graphql.swift */; };
+		240C91FB2970613D003547FC /* SchemaConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240C91F52970613D003547FC /* SchemaConfiguration.swift */; };
+		240C91FC2970613D003547FC /* SchemaMetadata.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240C91F62970613D003547FC /* SchemaMetadata.graphql.swift */; };
+		240C91FD2970613D003547FC /* SchemaGraphQL.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240C91F72970613D003547FC /* SchemaGraphQL.graphql.swift */; };
 		2452CA4B296F6BC700DD0CF7 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452CA4A296F6BC700DD0CF7 /* ErrorView.swift */; };
 		2489D9A2296F18AB0033717C /* HeyWorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2489D9A1296F18AB0033717C /* HeyWorldApp.swift */; };
 		2489D9A6296F18AC0033717C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2489D9A5296F18AC0033717C /* Assets.xcassets */; };
@@ -47,6 +54,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		240C91EB29706026003547FC /* GetCountries.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GetCountries.graphql; sourceTree = "<group>"; };
+		240C91F02970613D003547FC /* GetCountriesQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCountriesQuery.graphql.swift; sourceTree = "<group>"; };
+		240C91F32970613D003547FC /* Query.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.graphql.swift; sourceTree = "<group>"; };
+		240C91F42970613D003547FC /* Country.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.graphql.swift; sourceTree = "<group>"; };
+		240C91F52970613D003547FC /* SchemaConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaConfiguration.swift; sourceTree = "<group>"; };
+		240C91F62970613D003547FC /* SchemaMetadata.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaMetadata.graphql.swift; sourceTree = "<group>"; };
+		240C91F72970613D003547FC /* SchemaGraphQL.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaGraphQL.graphql.swift; sourceTree = "<group>"; };
 		2452CA4A296F6BC700DD0CF7 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		2489D99E296F18AB0033717C /* HeyWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2489D9A1296F18AB0033717C /* HeyWorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyWorldApp.swift; sourceTree = "<group>"; };
@@ -97,6 +111,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		240C91E929705FBC003547FC /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				240C91ED2970613D003547FC /* Generated */,
+				240C91EA29706000003547FC /* Queries */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		240C91EA29706000003547FC /* Queries */ = {
+			isa = PBXGroup;
+			children = (
+				240C91EB29706026003547FC /* GetCountries.graphql */,
+			);
+			path = Queries;
+			sourceTree = "<group>";
+		};
+		240C91ED2970613D003547FC /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				240C91EE2970613D003547FC /* Operations */,
+				240C91F12970613D003547FC /* Schema */,
+				240C91F72970613D003547FC /* SchemaGraphQL.graphql.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		240C91EE2970613D003547FC /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				240C91EF2970613D003547FC /* Queries */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		240C91EF2970613D003547FC /* Queries */ = {
+			isa = PBXGroup;
+			children = (
+				240C91F02970613D003547FC /* GetCountriesQuery.graphql.swift */,
+			);
+			path = Queries;
+			sourceTree = "<group>";
+		};
+		240C91F12970613D003547FC /* Schema */ = {
+			isa = PBXGroup;
+			children = (
+				240C91F22970613D003547FC /* Objects */,
+				240C91F52970613D003547FC /* SchemaConfiguration.swift */,
+				240C91F62970613D003547FC /* SchemaMetadata.graphql.swift */,
+			);
+			path = Schema;
+			sourceTree = "<group>";
+		};
+		240C91F22970613D003547FC /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				240C91F32970613D003547FC /* Query.graphql.swift */,
+				240C91F42970613D003547FC /* Country.graphql.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 		2452CA49296F6BAF00DD0CF7 /* Reusable Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				2489D9F7296F56380033717C /* README.md */,
-				2489D9A0296F18AB0033717C /* App */,
+				2489D9A0296F18AB0033717C /* HeyWorld */,
 				2489D9B1296F18AC0033717C /* HeyWorldTests */,
 				2489D9BB296F18AC0033717C /* HeyWorldUITests */,
 				2489D99F296F18AB0033717C /* Products */,
@@ -126,18 +202,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2489D9A0296F18AB0033717C /* App */ = {
+		2489D9A0296F18AB0033717C /* HeyWorld */ = {
 			isa = PBXGroup;
 			children = (
 				2489D9A1296F18AB0033717C /* HeyWorldApp.swift */,
 				2489D9A5296F18AC0033717C /* Assets.xcassets */,
 				2489D9CE296F1A710033717C /* Features */,
+				240C91E929705FBC003547FC /* GraphQL */,
 				2489D9D4296F1B720033717C /* Models */,
 				2489D9A7296F18AC0033717C /* Preview Content */,
 				2452CA49296F6BAF00DD0CF7 /* Reusable Components */,
 				2489D9E8296F1F180033717C /* Utilities */,
 			);
-			path = App;
+			path = HeyWorld;
 			sourceTree = "<group>";
 		};
 		2489D9A7296F18AC0033717C /* Preview Content */ = {
@@ -332,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2489D9F8296F56380033717C /* README.md in Resources */,
+				240C91EC29706026003547FC /* GetCountries.graphql in Resources */,
 				2489D9A9296F18AC0033717C /* Preview Assets.xcassets in Resources */,
 				2489D9A6296F18AC0033717C /* Assets.xcassets in Resources */,
 			);
@@ -358,18 +436,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				240C91FB2970613D003547FC /* SchemaConfiguration.swift in Sources */,
 				2489D9F0296F31500033717C /* CountryDetailView.swift in Sources */,
+				240C91FA2970613D003547FC /* Country.graphql.swift in Sources */,
 				2489D9EC296F2AD40033717C /* CountryListRowView.swift in Sources */,
 				2489D9F4296F32490033717C /* CountryDetailed.swift in Sources */,
 				2489D9F2296F31920033717C /* CountryDetailViewModel.swift in Sources */,
 				2489D9FA296F5AFA0033717C /* Continent.swift in Sources */,
 				2489D9FC296F5C0D0033717C /* Languages.swift in Sources */,
 				2489D9F6296F33C10033717C /* CountryProtocol.swift in Sources */,
+				240C91F92970613D003547FC /* Query.graphql.swift in Sources */,
+				240C91F82970613D003547FC /* GetCountriesQuery.graphql.swift in Sources */,
+				240C91FD2970613D003547FC /* SchemaGraphQL.graphql.swift in Sources */,
 				2489D9EA296F1F560033717C /* ViewModelState.swift in Sources */,
 				2489D9D3296F1ADB0033717C /* CountryListViewModel.swift in Sources */,
 				2489D9A2296F18AB0033717C /* HeyWorldApp.swift in Sources */,
 				2489D9D6296F1B860033717C /* CountryLight.swift in Sources */,
 				2452CA4B296F6BC700DD0CF7 /* ErrorView.swift in Sources */,
+				240C91FC2970613D003547FC /* SchemaMetadata.graphql.swift in Sources */,
 				2489D9D1296F1AC70033717C /* CountryListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
