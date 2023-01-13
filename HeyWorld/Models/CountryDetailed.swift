@@ -1,5 +1,3 @@
-import Foundation
-
 struct CountryDetailed: CountryProtocol {
     let code: String
     let name: String
@@ -10,6 +8,40 @@ struct CountryDetailed: CountryProtocol {
     let currency: String?
     let languages: [Language]
     let flag: String
+    
+    init(
+        code: String,
+        name: String,
+        native: String,
+        phone: String,
+        continent: Continent,
+        capital: String?,
+        currency: String?,
+        languages: [Language],
+        flag: String
+    ) {
+        self.code = code
+        self.name = name
+        self.native = native
+        self.phone = phone
+        self.continent = continent
+        self.capital = capital
+        self.currency = currency
+        self.languages = languages
+        self.flag = flag
+    }
+    
+    init(_ graphQLData: SchemaGraphQL.GetCountryDetailQuery.Data.Country) {
+        self.code = graphQLData.code
+        self.name = graphQLData.name
+        self.native = graphQLData.native
+        self.phone = graphQLData.phone
+        self.continent = Continent(graphQLData.continent)
+        self.capital = graphQLData.capital
+        self.currency = graphQLData.currency
+        self.languages = Language.toArray(graphQLData.languages)
+        self.flag = graphQLData.emoji
+    }
 }
 
 extension CountryDetailed {

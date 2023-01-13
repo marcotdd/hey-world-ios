@@ -33,6 +33,8 @@ public extension SchemaGraphQL {
       switch typename {
       case "Query": return SchemaGraphQL.Objects.Query
       case "Country": return SchemaGraphQL.Objects.Country
+      case "Continent": return SchemaGraphQL.Objects.Continent
+      case "Language": return SchemaGraphQL.Objects.Language
       default: return nil
       }
     }

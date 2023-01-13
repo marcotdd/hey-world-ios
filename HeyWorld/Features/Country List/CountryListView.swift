@@ -7,7 +7,10 @@ struct CountryListView: View {
         NavigationView {
             Group {
                 switch viewModel.state {
-                case .initial, .loading:
+                case .initial:
+                    Color.clear.onAppear(perform: viewModel.fetch)
+                    
+                case .loading:
                     ProgressView()
                     
                 case .failure(let error):
@@ -21,9 +24,6 @@ struct CountryListView: View {
                 }
             }
             .navigationTitle("World Countries")
-            .onAppear {
-                viewModel.fetch()
-            }
         }
     }
     

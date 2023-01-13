@@ -8,6 +8,12 @@ struct CountryLight: CountryProtocol, Identifiable {
 }
 
 extension CountryLight {
+    static func toArray(_ graphQLData: [SchemaGraphQL.GetCountriesQuery.Data.Country]) -> [CountryLight] {
+        graphQLData.compactMap { CountryLight(code: $0.code, flag: $0.emoji, name: $0.name) }
+    }
+}
+
+extension CountryLight {
     static let mokedList: [CountryLight] = [
         CountryLight(code: "ES", flag: "🇪🇸", name: "Spain"),
         CountryLight(code: "IT", flag: "🇮🇹", name: "Italy"),

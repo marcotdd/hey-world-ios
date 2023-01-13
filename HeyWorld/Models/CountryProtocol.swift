@@ -1,5 +1,3 @@
-import Foundation
-
 protocol CountryProtocol {
     var code: String { get }
     var name: String { get }

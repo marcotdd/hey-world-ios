@@ -14,6 +14,7 @@ public extension SchemaGraphQL {
             __typename
             code
             name
+            emoji
           }
         }
         """#
@@ -43,10 +44,12 @@ public extension SchemaGraphQL {
         public static var __selections: [ApolloAPI.Selection] { [
           .field("code", SchemaGraphQL.ID.self),
           .field("name", String.self),
+          .field("emoji", String.self),
         ] }
 
         public var code: SchemaGraphQL.ID { __data["code"] }
         public var name: String { __data["name"] }
+        public var emoji: String { __data["emoji"] }
       }
     }
   }
