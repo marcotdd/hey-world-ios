@@ -1,11 +1,17 @@
 import SwiftUI
 
 struct CountryDetailView: View {
+    // MARK: - Properties
+    
     @StateObject var viewModel: CountryDetailViewModel
+    
+    // MARK: - Initializer
     
     init(country: CountryProtocol) {
         _viewModel = StateObject(wrappedValue: CountryDetailViewModel(country: country))
     }
+    
+    // MARK: - Body
     
     var body: some View {
         Group {
@@ -25,6 +31,8 @@ struct CountryDetailView: View {
         }
         .navigationTitle(viewModel.title)
     }
+    
+    // MARK: - Sub-Views
     
     private var content: some View {
         ScrollView {

@@ -54,6 +54,16 @@ class Fetcher<Q: GraphQLQuery, Output>: ObservableObject {
             runQuery()
         }
     }
+    
+//    func refresh() {
+//        switch state {
+//        case .failure, .success:
+//            state = .refreshing
+//            runQuery()
+//
+//        default:
+//        }
+//    }
 }
 
 extension Fetcher {

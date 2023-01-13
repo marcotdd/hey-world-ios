@@ -1,7 +1,11 @@
 import SwiftUI
 
 struct CountryListView: View {
+    // MARK: - Properties
+    
     @StateObject var viewModel: CountryListViewModel = CountryListViewModel()
+    
+    // MARK: - Body
     
     var body: some View {
         NavigationView {
@@ -26,6 +30,8 @@ struct CountryListView: View {
             .navigationTitle("World Countries")
         }
     }
+    
+    // MARK: - Sub-Views
     
     private var content: some View {
         VStack {

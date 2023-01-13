@@ -2,13 +2,19 @@ import Foundation
 import Combine
 
 final class CountryDetailViewModel: ObservableObject {
+    // MARK: - Properties
+    
     @Published var state: ViewModelState = .initial
-    @Published var country: CountryDetailed?
+    
+    var country: CountryDetailed?
+    let title: String
     
     private var bag = Set<AnyCancellable>()
     private let fetcher: CountryDetailFetcher
     
-    let title: String
+    // MARK: - Computed Properties
+    
+    /// Provide a formatted list of languages with the native version (e.g. Italian (Italian), English (English))
     var formattedLanguages: String? {
         guard let country = country else { return nil }
         guard !country.languages.isEmpty else { return "-" }
@@ -18,6 +24,8 @@ final class CountryDetailViewModel: ObservableObject {
             return "\(name) (\(native))"
         }.joined(separator: ", ")
     }
+    
+    // MARK: - Initializer
     
     init(country: CountryProtocol) {
         self.title = country.name
@@ -41,6 +49,8 @@ final class CountryDetailViewModel: ObservableObject {
         }.store(in: &bag)
 
     }
+    
+    // MARK: - Fetch methods
     
     func fetch() {
         fetcher.fetch()

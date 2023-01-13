@@ -2,12 +2,16 @@ import Foundation
 import Combine
 
 final class CountryListViewModel: ObservableObject {
+    // MARK: - Properties
+    
     @Published var state: ViewModelState = .initial
     
     var countries: [CountryLight] = []
     
     private var bag = Set<AnyCancellable>()
     private let fetcher: CountryListFetcher
+    
+    // MARK: - Initializer
     
     init() {
         fetcher = CountryListFetcher()
@@ -29,6 +33,8 @@ final class CountryListViewModel: ObservableObject {
             }
         }.store(in: &bag)
     }
+    
+    // MARK: - Fetch methods
     
     func fetch() {
         fetcher.fetch()
