@@ -12,7 +12,11 @@ struct CountryListView: View {
             Group {
                 switch viewModel.state {
                 case .initial:
-                    Color.clear.onAppear(perform: viewModel.fetch)
+                    Color.clear.onAppear {
+                        Task {
+                            await viewModel.fetchAA()
+                        }
+                    }
                     
                 case .loading:
                     ProgressView()
@@ -20,11 +24,19 @@ struct CountryListView: View {
                 case .failure(let error):
                     ErrorView(error: error)
                         .refreshable {
-                            viewModel.refresh()
+                            await viewModel.refresh()
                         }
                     
                 case .success:
-                    content
+                    if !viewModel.countries.isEmpty {
+                        countriesView()
+                    } else {
+                        EmptyView {
+                            Text("No countries available")
+                        }.refreshable {
+                            await viewModel.refresh()
+                        }
+                    }
                 }
             }
             .navigationTitle("World Countries")
@@ -33,7 +45,7 @@ struct CountryListView: View {
     
     // MARK: - Sub-Views
     
-    private var content: some View {
+    private func countriesView() -> some View {
         VStack {
             List(viewModel.countries) { country in
                 NavigationLink(destination: CountryDetailView(country: country)) {
@@ -42,7 +54,7 @@ struct CountryListView: View {
             }
             .listStyle(.plain)
             .refreshable {
-                viewModel.refresh()
+                await viewModel.refresh()
             }
         }
     }

@@ -17,6 +17,8 @@
 		240C91FF2970639B003547FC /* CountryListFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240C91FE2970639B003547FC /* CountryListFetcher.swift */; };
 		2452CA4B296F6BC700DD0CF7 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452CA4A296F6BC700DD0CF7 /* ErrorView.swift */; };
 		2458CA3F2971B56700B969AA /* CountryDetailElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458CA3E2971B56700B969AA /* CountryDetailElementView.swift */; };
+		2458CA41297319D400B969AA /* HeyWorldError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458CA40297319D400B969AA /* HeyWorldError.swift */; };
+		2458CA4329731B0900B969AA /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458CA4229731B0900B969AA /* EmptyView.swift */; };
 		2489D9A2296F18AB0033717C /* HeyWorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2489D9A1296F18AB0033717C /* HeyWorldApp.swift */; };
 		2489D9A6296F18AC0033717C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2489D9A5296F18AC0033717C /* Assets.xcassets */; };
 		2489D9A9296F18AC0033717C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2489D9A8296F18AC0033717C /* Preview Assets.xcassets */; };
@@ -75,6 +77,8 @@
 		240C91FE2970639B003547FC /* CountryListFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListFetcher.swift; sourceTree = "<group>"; };
 		2452CA4A296F6BC700DD0CF7 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		2458CA3E2971B56700B969AA /* CountryDetailElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailElementView.swift; sourceTree = "<group>"; };
+		2458CA40297319D400B969AA /* HeyWorldError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyWorldError.swift; sourceTree = "<group>"; };
+		2458CA4229731B0900B969AA /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		2489D99E296F18AB0033717C /* HeyWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2489D9A1296F18AB0033717C /* HeyWorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyWorldApp.swift; sourceTree = "<group>"; };
 		2489D9A5296F18AC0033717C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 		2452CA49296F6BAF00DD0CF7 /* Reusable Components */ = {
 			isa = PBXGroup;
 			children = (
+				2458CA4229731B0900B969AA /* EmptyView.swift */,
 				2452CA4A296F6BC700DD0CF7 /* ErrorView.swift */,
 			);
 			path = "Reusable Components";
@@ -340,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				24E3DFC42970B50B00133975 /* Fetcher.swift */,
+				2458CA40297319D400B969AA /* HeyWorldError.swift */,
 				24E3DFA22970A56800133975 /* Network.swift */,
 				24E3DFBD2970AE0400133975 /* Fetchers */,
 			);
@@ -502,6 +508,7 @@
 				2489D9EC296F2AD40033717C /* CountryListRowView.swift in Sources */,
 				2489D9F4296F32490033717C /* CountryDetailed.swift in Sources */,
 				24E3DFA32970A56800133975 /* Network.swift in Sources */,
+				2458CA4329731B0900B969AA /* EmptyView.swift in Sources */,
 				2489D9F2296F31920033717C /* CountryDetailViewModel.swift in Sources */,
 				2489D9FA296F5AFA0033717C /* Continent.swift in Sources */,
 				24E3DFBC2970ADEF00133975 /* GetCountryDetailQuery.graphql.swift in Sources */,
@@ -518,6 +525,7 @@
 				2489D9D3296F1ADB0033717C /* CountryListViewModel.swift in Sources */,
 				2489D9A2296F18AB0033717C /* HeyWorldApp.swift in Sources */,
 				2489D9D6296F1B860033717C /* CountryLight.swift in Sources */,
+				2458CA41297319D400B969AA /* HeyWorldError.swift in Sources */,
 				240C91FF2970639B003547FC /* CountryListFetcher.swift in Sources */,
 				2458CA3F2971B56700B969AA /* CountryDetailElementView.swift in Sources */,
 				2452CA4B296F6BC700DD0CF7 /* ErrorView.swift in Sources */,

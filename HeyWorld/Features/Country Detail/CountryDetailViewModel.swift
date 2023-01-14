@@ -1,6 +1,7 @@
 import Foundation
 import Combine
 
+@MainActor
 final class CountryDetailViewModel: ObservableObject {
     // MARK: - Properties
     
@@ -9,12 +10,11 @@ final class CountryDetailViewModel: ObservableObject {
     var country: CountryDetailed?
     let title: String
     
-    private var bag = Set<AnyCancellable>()
     private let fetcher: CountryDetailFetcher
     
     // MARK: - Computed Properties
     
-    /// Provide a formatted list of languages with the native version (e.g. Italian (Italian), English (English))
+    /// It provides a formatted list of languages with the native version (e.g. Italian (Italian), English (English))
     var formattedLanguages: String? {
         guard let country = country else { return nil }
         guard !country.languages.isEmpty else { return "-" }
@@ -30,33 +30,30 @@ final class CountryDetailViewModel: ObservableObject {
     init(country: CountryProtocol) {
         self.title = country.name
         self.fetcher = CountryDetailFetcher(code: country.code)
-        
-        fetcher.$state.sink { fetcherState in
-            switch fetcherState {
-            case .success(let country):
-                self.country = country
-                self.state = .success
-                
-            case .initial:
-                self.state = .initial
-                
-            case .loading:
-                self.state = .loading
-                
-            case .failure(let error):
-                self.state = .failure(error)
-            }
-        }.store(in: &bag)
-
     }
     
     // MARK: - Fetch methods
     
-    func fetch() {
-        fetcher.fetch()
+    func fetchAA() async {
+        self.state = .loading
+        do {
+            self.country = try await fetcher.fetch()
+            self.state = .success
+        } catch let error as HeyWorldError {
+            self.state = .failure(error)
+        } catch {
+            self.state = .failure(HeyWorldError.unknownError)
+        }
     }
     
-    func refresh() {
-        print("----> REFRESH")
+    func refresh() async {
+        do {
+            self.country = try await fetcher.fetch()
+            self.state = .success
+        } catch let error as HeyWorldError {
+            self.state = .failure(error)
+        } catch {
+            self.state = .failure(HeyWorldError.unknownError)
+        }
     }
 }

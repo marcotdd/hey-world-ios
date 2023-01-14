@@ -1,84 +1,55 @@
 import Foundation
 import Combine
+import Apollo
 
-class Fetcher<Q: GraphQLQuery, Output>: ObservableObject {
-    @Published var state: FetcherState<Q, Output>
-    
+class Fetcher<Q: GraphQLQuery, Output> {
     private var query: Q
     private var extract: (Q.Data) -> Output?
     
-    private var bag = Set<AnyCancellable>()
-    private var storedData: Output?
-    
     init(query: Q, extract: @escaping ((Q.Data) -> Output?)) {
-        self.state = .initial
         self.query = query
         self.extract = extract
-        
-        self.$state.sink { state in
-            switch state {
-            case .success(let data):
-                self.storedData = data
-
-            default:
-                break
-            }
-        }.store(in: &bag)
     }
-    
-    private func runQuery() {
+
+    func fetch() async throws -> Output? {
         print(query)
-        Network.shared.apollo.fetch(query: query) { result in
-            switch result {
-            case .success(let graphQLResult):
-                guard let graphQLData = graphQLResult.data, let data = self.extract(graphQLData) else {
-                    self.state = .failure(FetcherError.dataExtractionFailed)
-                    return
+        
+        return try await withCheckedThrowingContinuation({ continuation in
+            Network.shared.apollo.fetch(query: query) { result in
+                switch result {
+                case .success(let graphQLResult):
+                    guard let graphQLData = graphQLResult.data else {
+                        continuation.resume(throwing: HeyWorldError.emptyDataError)
+                        return
+                    }
+                    
+                    guard let data = self.extract(graphQLData) else {
+                        continuation.resume(returning: nil)
+                        return
+                    }
+                    
+                    continuation.resume(returning: data)
+                    
+                case .failure(let error):                    
+                    if let sessionError = error as? Apollo.URLSessionClient.URLSessionClientError {
+                        switch sessionError {
+                        case .networkError(let data, let response, let underlying):
+                            continuation.resume(throwing: HeyWorldError.networkError(data: data, response: response, underlying: underlying))
+                            
+                        case .dataForRequestNotFound(let request):
+                            continuation.resume(throwing: HeyWorldError.dataForRequestNotFound(request: request))
+                            
+                        case .noHTTPResponse(let request):
+                            continuation.resume(throwing: HeyWorldError.noHTTPResponse(request: request))
+                            
+                        default:
+                            continuation.resume(throwing: HeyWorldError.unknownError)
+                        }
+                    } else {
+                        continuation.resume(throwing: HeyWorldError.unknownError)
+                    }
                 }
-
-                self.state = .success(data)
-                
-            case .failure(let error):
-                self.state = .failure(error)
             }
-        }
-    }
-    
-    func fetch() {
-        switch state {
-        case .loading:
-            break
-
-        case .initial, .failure, .success:
-            state = .loading
-            runQuery()
-        }
-    }
-    
-//    func refresh() {
-//        switch state {
-//        case .failure, .success:
-//            state = .refreshing
-//            runQuery()
-//
-//        default:
-//        }
-//    }
-}
-
-extension Fetcher {
-    enum FetcherState<Q: GraphQLQuery, Output> {
-        case initial
-        case loading
-        case success(Output)
-        case failure(Error)
-    }
-    
-    enum FetcherError: String, LocalizedError {
-        case dataExtractionFailed = "Unable to extract data from graphQL"
-
-        var errorDescription: String {
-            return rawValue
-        }
+        })
     }
 }
