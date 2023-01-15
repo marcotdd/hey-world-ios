@@ -10,7 +10,7 @@ final class CountryDetailViewModel: ObservableObject {
     var country: CountryDetailed?
     let title: String
     
-    private let fetcher: CountryDetailFetcher
+    private let fetcher: CountryDetailFetcherProtocol
     
     // MARK: - Computed Properties
     
@@ -27,14 +27,19 @@ final class CountryDetailViewModel: ObservableObject {
     
     // MARK: - Initializer
     
-    init(country: CountryProtocol) {
+    init(country: CountryProtocol, fetcher: CountryDetailFetcherProtocol? = nil) {
         self.title = country.name
-        self.fetcher = CountryDetailFetcher(code: country.code)
+        
+        if let fetcher = fetcher {
+            self.fetcher = fetcher
+        } else {
+            self.fetcher = CountryDetailFetcher(code: country.code)
+        }
     }
     
     // MARK: - Fetch methods
     
-    func fetchAA() async {
+    func fetch() async {
         self.state = .loading
         do {
             self.country = try await fetcher.fetch()

@@ -9,21 +9,21 @@ final class CountryListViewModel: ObservableObject {
     
     var countries: [CountryLight] = []
     
-    private let fetcher: CountryListFetcher
+    private let fetcher: CountryListFetcherProtocol
     
     // MARK: - Initializer
     
-    init() {
-        fetcher = CountryListFetcher()
+    init(fetcher: CountryListFetcherProtocol? = nil) {
+        if let fetcher {
+            self.fetcher = fetcher
+        } else {
+            self.fetcher = CountryListFetcher()
+        }
     }
     
     // MARK: - Fetch methods
     
-//    func fetch() {
-//        fetcher.fetch()
-//    }
-    
-    func fetchAA() async {
+    func fetch() async {
         self.state = .loading
         do {
             self.countries = try await fetcher.fetch() ?? []

@@ -19,12 +19,13 @@
 		2458CA3F2971B56700B969AA /* CountryDetailElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458CA3E2971B56700B969AA /* CountryDetailElementView.swift */; };
 		2458CA41297319D400B969AA /* HeyWorldError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458CA40297319D400B969AA /* HeyWorldError.swift */; };
 		2458CA4329731B0900B969AA /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458CA4229731B0900B969AA /* EmptyView.swift */; };
+		2458CA452974124400B969AA /* CountryListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458CA442974124400B969AA /* CountryListViewModelTests.swift */; };
+		2458CA4B297441A000B969AA /* CountryListFetcherMocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458CA4A297441A000B969AA /* CountryListFetcherMocked.swift */; };
+		2458CA4D297457A000B969AA /* CountryDetailFetcherMocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458CA4C297457A000B969AA /* CountryDetailFetcherMocked.swift */; };
+		2458CA4F297458F300B969AA /* CountryDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458CA4E297458F300B969AA /* CountryDetailViewModelTests.swift */; };
 		2489D9A2296F18AB0033717C /* HeyWorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2489D9A1296F18AB0033717C /* HeyWorldApp.swift */; };
 		2489D9A6296F18AC0033717C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2489D9A5296F18AC0033717C /* Assets.xcassets */; };
 		2489D9A9296F18AC0033717C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2489D9A8296F18AC0033717C /* Preview Assets.xcassets */; };
-		2489D9B3296F18AC0033717C /* HeyWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2489D9B2296F18AC0033717C /* HeyWorldTests.swift */; };
-		2489D9BD296F18AC0033717C /* HeyWorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2489D9BC296F18AC0033717C /* HeyWorldUITests.swift */; };
-		2489D9BF296F18AC0033717C /* HeyWorldUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2489D9BE296F18AC0033717C /* HeyWorldUITestsLaunchTests.swift */; };
 		2489D9CD296F18E10033717C /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 2489D9CC296F18E10033717C /* Apollo */; };
 		2489D9D1296F1AC70033717C /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2489D9D0296F1AC70033717C /* CountryListView.swift */; };
 		2489D9D3296F1ADB0033717C /* CountryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2489D9D2296F1ADB0033717C /* CountryListViewModel.swift */; };
@@ -57,13 +58,6 @@
 			remoteGlobalIDString = 2489D99D296F18AB0033717C;
 			remoteInfo = HeyWorld;
 		};
-		2489D9B9296F18AC0033717C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2489D996296F18AB0033717C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2489D99D296F18AB0033717C;
-			remoteInfo = HeyWorld;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -79,15 +73,15 @@
 		2458CA3E2971B56700B969AA /* CountryDetailElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailElementView.swift; sourceTree = "<group>"; };
 		2458CA40297319D400B969AA /* HeyWorldError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyWorldError.swift; sourceTree = "<group>"; };
 		2458CA4229731B0900B969AA /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		2458CA442974124400B969AA /* CountryListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewModelTests.swift; sourceTree = "<group>"; };
+		2458CA4A297441A000B969AA /* CountryListFetcherMocked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListFetcherMocked.swift; sourceTree = "<group>"; };
+		2458CA4C297457A000B969AA /* CountryDetailFetcherMocked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailFetcherMocked.swift; sourceTree = "<group>"; };
+		2458CA4E297458F300B969AA /* CountryDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewModelTests.swift; sourceTree = "<group>"; };
 		2489D99E296F18AB0033717C /* HeyWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2489D9A1296F18AB0033717C /* HeyWorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyWorldApp.swift; sourceTree = "<group>"; };
 		2489D9A5296F18AC0033717C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2489D9A8296F18AC0033717C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2489D9AE296F18AC0033717C /* HeyWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeyWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2489D9B2296F18AC0033717C /* HeyWorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyWorldTests.swift; sourceTree = "<group>"; };
-		2489D9B8296F18AC0033717C /* HeyWorldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeyWorldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2489D9BC296F18AC0033717C /* HeyWorldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyWorldUITests.swift; sourceTree = "<group>"; };
-		2489D9BE296F18AC0033717C /* HeyWorldUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyWorldUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2489D9D0296F1AC70033717C /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
 		2489D9D2296F1ADB0033717C /* CountryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewModel.swift; sourceTree = "<group>"; };
 		2489D9D5296F1B860033717C /* CountryLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryLight.swift; sourceTree = "<group>"; };
@@ -121,13 +115,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2489D9AB296F18AC0033717C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2489D9B5296F18AC0033717C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -220,7 +207,6 @@
 				2489D9F7296F56380033717C /* README.md */,
 				2489D9A0296F18AB0033717C /* HeyWorld */,
 				2489D9B1296F18AC0033717C /* HeyWorldTests */,
-				2489D9BB296F18AC0033717C /* HeyWorldUITests */,
 				2489D99F296F18AB0033717C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -230,7 +216,6 @@
 			children = (
 				2489D99E296F18AB0033717C /* HeyWorld.app */,
 				2489D9AE296F18AC0033717C /* HeyWorldTests.xctest */,
-				2489D9B8296F18AC0033717C /* HeyWorldUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -262,18 +247,12 @@
 		2489D9B1296F18AC0033717C /* HeyWorldTests */ = {
 			isa = PBXGroup;
 			children = (
-				2489D9B2296F18AC0033717C /* HeyWorldTests.swift */,
+				2458CA4C297457A000B969AA /* CountryDetailFetcherMocked.swift */,
+				2458CA4E297458F300B969AA /* CountryDetailViewModelTests.swift */,
+				2458CA4A297441A000B969AA /* CountryListFetcherMocked.swift */,
+				2458CA442974124400B969AA /* CountryListViewModelTests.swift */,
 			);
 			path = HeyWorldTests;
-			sourceTree = "<group>";
-		};
-		2489D9BB296F18AC0033717C /* HeyWorldUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2489D9BC296F18AC0033717C /* HeyWorldUITests.swift */,
-				2489D9BE296F18AC0033717C /* HeyWorldUITestsLaunchTests.swift */,
-			);
-			path = HeyWorldUITests;
 			sourceTree = "<group>";
 		};
 		2489D9CE296F1A710033717C /* Features */ = {
@@ -402,24 +381,6 @@
 			productReference = 2489D9AE296F18AC0033717C /* HeyWorldTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2489D9B7296F18AC0033717C /* HeyWorldUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2489D9C8296F18AC0033717C /* Build configuration list for PBXNativeTarget "HeyWorldUITests" */;
-			buildPhases = (
-				2489D9B4296F18AC0033717C /* Sources */,
-				2489D9B5296F18AC0033717C /* Frameworks */,
-				2489D9B6296F18AC0033717C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2489D9BA296F18AC0033717C /* PBXTargetDependency */,
-			);
-			name = HeyWorldUITests;
-			productName = HeyWorldUITests;
-			productReference = 2489D9B8296F18AC0033717C /* HeyWorldUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -434,10 +395,6 @@
 						CreatedOnToolsVersion = 14.2;
 					};
 					2489D9AD296F18AC0033717C = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 2489D99D296F18AB0033717C;
-					};
-					2489D9B7296F18AC0033717C = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 2489D99D296F18AB0033717C;
 					};
@@ -461,7 +418,6 @@
 			targets = (
 				2489D99D296F18AB0033717C /* HeyWorld */,
 				2489D9AD296F18AC0033717C /* HeyWorldTests */,
-				2489D9B7296F18AC0033717C /* HeyWorldUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -482,13 +438,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2489D9AC296F18AC0033717C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2489D9B6296F18AC0033717C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -538,16 +487,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2489D9B3296F18AC0033717C /* HeyWorldTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2489D9B4296F18AC0033717C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2489D9BF296F18AC0033717C /* HeyWorldUITestsLaunchTests.swift in Sources */,
-				2489D9BD296F18AC0033717C /* HeyWorldUITests.swift in Sources */,
+				2458CA4D297457A000B969AA /* CountryDetailFetcherMocked.swift in Sources */,
+				2458CA452974124400B969AA /* CountryListViewModelTests.swift in Sources */,
+				2458CA4F297458F300B969AA /* CountryDetailViewModelTests.swift in Sources */,
+				2458CA4B297441A000B969AA /* CountryListFetcherMocked.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,11 +501,6 @@
 			isa = PBXTargetDependency;
 			target = 2489D99D296F18AB0033717C /* HeyWorld */;
 			targetProxy = 2489D9AF296F18AC0033717C /* PBXContainerItemProxy */;
-		};
-		2489D9BA296F18AC0033717C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2489D99D296F18AB0033717C /* HeyWorld */;
-			targetProxy = 2489D9B9296F18AC0033717C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -789,42 +727,6 @@
 			};
 			name = Release;
 		};
-		2489D9C9296F18AC0033717C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CQASCH7UX9;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = it.taddei.HeyWorldUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = HeyWorld;
-			};
-			name = Debug;
-		};
-		2489D9CA296F18AC0033717C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CQASCH7UX9;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = it.taddei.HeyWorldUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = HeyWorld;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -851,15 +753,6 @@
 			buildConfigurations = (
 				2489D9C6296F18AC0033717C /* Debug */,
 				2489D9C7296F18AC0033717C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2489D9C8296F18AC0033717C /* Build configuration list for PBXNativeTarget "HeyWorldUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2489D9C9296F18AC0033717C /* Debug */,
-				2489D9CA296F18AC0033717C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

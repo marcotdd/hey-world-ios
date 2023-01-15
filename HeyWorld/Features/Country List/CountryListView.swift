@@ -14,7 +14,7 @@ struct CountryListView: View {
                 case .initial:
                     Color.clear.onAppear {
                         Task {
-                            await viewModel.fetchAA()
+                            await viewModel.fetch()
                         }
                     }
                     
