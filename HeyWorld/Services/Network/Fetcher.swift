@@ -3,7 +3,9 @@ import Combine
 import Apollo
 
 class Fetcher<Q: GraphQLQuery, Output> {
+    /// The query to execute
     private var query: Q
+    /// Extract closure is used to convert the Apollo data to a specific Output type
     private var extract: (Q.Data) -> Output?
     
     init(query: Q, extract: @escaping ((Q.Data) -> Output?)) {
@@ -12,9 +14,7 @@ class Fetcher<Q: GraphQLQuery, Output> {
     }
 
     func fetch() async throws -> Output? {
-        print(query)
-        
-        return try await withCheckedThrowingContinuation({ continuation in
+        try await withCheckedThrowingContinuation({ continuation in
             Network.shared.apollo.fetch(query: query) { result in
                 switch result {
                 case .success(let graphQLResult):

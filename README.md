@@ -22,4 +22,4 @@ This is used to generate Swift source code
 ```
 
 ## Third Party Software
-- [Apollo iOS 1.0.6](https://github.com/apollographql/apollo-ios)
+- [Apollo iOS 1.0.6](https://github.com/apollographql/apollo-ios) - It allows to execute queries and mutations against a GraphQL server, and returns results as query-specific Swift types.

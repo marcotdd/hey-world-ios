@@ -53,7 +53,7 @@ extension CountryDetailed {
         continent: Continent(code: "AS", name: "Asia"),
         capital: "Tokyo",
         currency: "JPY",
-        languages: [Language(code: "ja", name: "Japanese", native: "日本語")],
+        languages: [Language(code: "ja", name: "Japanese", native: "日本語"), Language(code: "en", name: "English", native: "English")],
         flag: "🇯🇵"
     )
 }

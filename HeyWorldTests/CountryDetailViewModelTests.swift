@@ -12,6 +12,7 @@ final class CountryDetailViewModelTests: XCTestCase {
         await viewModel.fetch()
         XCTAssertNotNil(viewModel.country)
         XCTAssertTrue(viewModel.state == .success)
+        XCTAssertEqual(viewModel.formattedLanguages, "Japanese (日本語), English (English)")
     }
     
     @MainActor func testCountryDetailNil() async throws {

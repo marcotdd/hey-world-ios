@@ -12,7 +12,7 @@ class CountryDetailFetcherMocked: CountryDetailFetcherProtocol {
     }
     
     func fetch() async throws -> CountryDetailed? {
-        try await Task.sleep(nanoseconds: 1_000_000_000)
+        try await Task.sleep(nanoseconds: 5_000_000)
         
         if let error = error {
             throw error
